@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Community Profile Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-testid="test-page-body">
+  <main class="profile-main" data-testid="test-page-main">
+    <article class="hero-card" aria-label="Saltzman profile card" data-testid="test-profile-card">
+      <button
+        type="button"
+        class="hero-image-button"
+        id="avatar-trigger"
+        aria-label="Upload profile photo"
+        data-testid="test-avatar-trigger"
+      >
+        <img
+          class="hero-image"
+          id="avatar-image"
+          data-testid="test-user-avatar"
+          src="https://i.postimg.cc/nLghGR57/1738178416925-1.jpg"
+          alt="Saltzman portrait"
+        />
+      </button>
+      <input
+        type="file"
+        accept="image/*"
+        id="avatar-file-input"
+        class="hidden-file-input"
+        aria-label="Choose profile photo"
+        data-testid="test-avatar-file-input"
+      />
+      <div class="glass-overlay">
+        <header class="identity">
+          <div class="name-row">
+            <h1 data-testid="test-user-name">Saltzman</h1>
+            <span class="material-symbols-outlined verified-icon" aria-hidden="true">verified</span>
+          </div>
+          <p data-testid="test-user-bio">A Product Designer focused on intuitive user experiences.</p>
+        </header>
+        <div class="stats-row">
+          <div class="stats-group">
+            <div class="stat-item">
+              <span class="material-symbols-outlined" aria-hidden="true">group</span>
+              <span class="stat-number">312</span>
+              <span class="stat-label">Followers</span>
+            </div>
+            <div class="stat-item">
+              <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+              <span class="stat-number">48</span>
+              <span class="stat-label">Posts</span>
+            </div>
+          </div>
+          <button type="button" class="follow-button" aria-label="Follow Saltzman">
+            Follow +
+          </button>
+        </div>
+      </div>
+    </article>
+    <section class="about-card" aria-label="About Saltzman">
+      <h2>About Saltzman</h2>
+      <p data-testid="test-about-summary">
+        Saltzman
+        <span data-testid="test-user-dislikes">dislikes rogue witches, hidden vampire nests, and broken silver weapons</span>,
+        he <span data-testid="test-user-hobbies">likes tracking supernatural lore, crafting wooden stakes, and night patrols</span>.
+      </p>
+      <div class="utility-row">
+        <div class="url-input-wrap">
+          <input
+            id="avatar-url-input"
+            type="url"
+            placeholder="Paste avatar URL"
+            aria-label="Avatar URL"
+            data-testid="test-avatar-url-input"
+          />
+          <button type="button" id="avatar-url-submit" class="url-submit-btn" aria-label="Submit avatar URL">
+            Go
+          </button>
+        </div>
+        <span id="user-time" aria-live="polite" data-testid="test-user-time">0</span>
+      </div>
+      <nav class="social-inline" aria-label="Social links" data-testid="test-user-social-links">
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">X</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+      </nav>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
